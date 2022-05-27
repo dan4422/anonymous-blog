@@ -1,0 +1,10 @@
+<h1>Anonymous Blog Spot!</h1>
+<h2>Write whatever you want and noone will know.</h2>
+<h2>Click the new button to create a new anonymous blog post</h2>
+<button><a href="/blogs/new">Add a post</a></button>
+<ul>${posts.map(post => {
+  return `
+  <li><a href="/blogs/${post.id}">${post.title}</a></li>
+  `
+}).join('')}
+</ul>
